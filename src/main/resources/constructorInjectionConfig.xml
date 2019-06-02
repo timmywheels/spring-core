@@ -3,15 +3,13 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
        xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:c="http://www.springframework.org/schema/c"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
     http://www.springframework.org/schema/beans/spring-beans.xsd
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <bean class="com.timwheeler.spring.innerbeans.Employee" name="employee" p:id="4591" scope="prototype">
-        <property name="address">
-            <bean class="com.timwheeler.spring.innerbeans.Address" p:houseNumber="22" p:street="Oak Hill Ave" p:city="Seekonk"/>
-        </property>
-    </bean>
+    <bean class="com.timwheeler.spring.constructorinjection.Address" name="address" p:houseNumber="22" p:city="Seekonk" p:street="Oak Hill Ave"/>
+    <bean class="com.timwheeler.spring.constructorinjection.Employee" name="employee" c:id="123" c:address-ref="address"/>
 
 </beans>
