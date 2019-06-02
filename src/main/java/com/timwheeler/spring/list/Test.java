@@ -10,5 +10,4 @@ public class Test {
         System.out.println(hospital.getName());
         System.out.println(hospital.getDepartments());
     }
-
 }
