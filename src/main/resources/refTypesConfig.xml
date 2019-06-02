@@ -8,6 +8,9 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
+
     <bean name="scores" class="com.timwheeler.spring.reftypes.Scores" p:math="80" p:physics="91" p:computerScience="99" />
     <bean name="student" class="com.timwheeler.spring.reftypes.Student" p:scores-ref="scores"/>
+
+
 </beans>
